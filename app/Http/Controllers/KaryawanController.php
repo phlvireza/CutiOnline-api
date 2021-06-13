@@ -50,15 +50,15 @@ class KaryawanController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request,all(),[
-            'nik'=>'number|required',
+            'nik'=>'numeric|required',
             'id_departemen'=>'string|required',
             'id_jabatan'=>'string|required',
             'nama'=>'string|required',
             'tempat_lahir'=>'string|required',
             'jk'=>'string|required',
-            'telp'=>'number|required',
+            'telp'=>'numeric|required',
             'alamat'=>'string|required',
-            'status_pegawai'=>'number|required',
+            'status_pegawai'=>'numeric|required',
             'pendidikan'=>'string|required'
         ]);
         if($validator->fails())
@@ -132,15 +132,15 @@ class KaryawanController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(),[
-            'nik'=>'number',
+            'nik'=>'numeric',
             'id_departemen'=>'string',
             'id_jabatan'=>'string',
             'nama'=>'string',
             'tempat_lahir'=>'string',
             'jk'=>'string',
-            'telp'=>'number',
+            'telp'=>'numeric',
             'alamat'=>'string',
-            'status_pegawai'=>'number',
+            'status_pegawai'=>'numeric',
             'pendidikan'=>'string'
         ]);
         if($validator->fails())

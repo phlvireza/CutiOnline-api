@@ -51,11 +51,11 @@ class CutiController extends Controller
     {
         $validator = Validator::make($request->all(),[
             'id_jeniscuti'=>'required|string',
-            'nik'=>'required|number',
+            'nik'=>'required|numeric',
             'mulai_cuti'=>'required|string',
             'akhir_cuti'=>'required|string',
-            'jumlah_cuti'=>'required|number',
-            'sisa_cuti'=>'required|number',
+            'jumlah_cuti'=>'required|numeric',
+            'sisa_cuti'=>'required|numeric',
             'keterangan'=>'required|string'
         ]);
         if($validator->fails())
@@ -126,11 +126,11 @@ class CutiController extends Controller
     {
         $validator = Validator::make($request->all(),[
             'id_jeniscuti'=>'string',
-            'nik'=>'number',
+            'nik'=>'numeric',
             'mulai_cuti'=>'string',
             'akhir_cuti'=>'string',
-            'jumlah_cuti'=>'number',
-            'sisa_cuti'=>'number',
+            'jumlah_cuti'=>'numeric',
+            'sisa_cuti'=>'numeric',
             'keterangan'=>'string'
         ]);
         if($validator->fails())
